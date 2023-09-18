@@ -11,7 +11,7 @@ export default async function getPostBySlug(slug: string) {
   };
   const options = {
     headers: {
-      Authorization: `Bearer e5d7db24b0fe24d375e6c3f181005efae4c99718da7e4d84499e23f68e2501887313154fc55000e3757ccf7b35e66e2032bbc0f61ab29161be4bc6da646f56f04356acc80910cec3b6dd72c34036f83ae066df726ae11fc2d6295cb853efb377ef2b777fab9a3463b0691befeeef60707e2b17f2ed695fba324d7687d2e0e123`,
+      Authorization: `Bearer +${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
     },
   };
   const response = await fetchAPI(path, urlParamsObject, options);
